@@ -1,0 +1,35 @@
+{
+  "name": "@zxiaosi/cli",
+  "version": "0.0.0",
+  "description": "cli tool for qiankun",
+  "author": "zxiaosi",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "build.config.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxiaosi/npm.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "zxiaosi": "./dist/index.cjs"
+  },
+  "keywords": [
+    "qiankun"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "unbuild": "^3.5.0"
+  },
+  "scripts": {
+    "build": "unbuild"
+  }
+}
