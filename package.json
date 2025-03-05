@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "pnpm -r exec rimraf node_modules && rimraf ./node_modules"
+  },
+  "devDependencies": {}
+}
