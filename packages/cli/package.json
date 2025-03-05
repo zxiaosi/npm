@@ -1,6 +1,6 @@
 {
   "name": "@zxiaosi/cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "cli tool for qiankun",
   "author": "zxiaosi",
   "license": "MIT",
@@ -21,7 +21,10 @@
     "zxiaosi": "./dist/index.cjs"
   },
   "keywords": [
-    "qiankun"
+    "qiankun",
+    "umi",
+    "vite",
+    "monorepos"
   ],
   "publishConfig": {
     "access": "public"
