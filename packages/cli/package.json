@@ -30,9 +30,12 @@
     "access": "public"
   },
   "devDependencies": {
+    "@clack/prompts": "^0.10.0",
+    "picocolors": "^1.1.1",
     "unbuild": "^3.5.0"
   },
   "scripts": {
-    "build": "unbuild"
+    "build": "unbuild --minify",
+    "dev": "unbuild --stub"
   }
 }

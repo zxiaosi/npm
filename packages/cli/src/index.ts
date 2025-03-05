@@ -1,11 +1,12 @@
 #! /usr/bin/env node
 
-/** Node CLI */
+import { handlePrompts } from './core';
+
 class CLI {
   constructor() {}
 
   async run() {
-    console.log('Hello World');
+    handlePrompts();
   }
 }
 

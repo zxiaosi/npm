@@ -1,11 +1,17 @@
 #! /usr/bin/env node
-'use strict';
+const { createJiti } = require("../../../node_modules/.pnpm/jiti@2.4.2/node_modules/jiti/lib/jiti.cjs")
 
-class CLI {
-  constructor() {
+const jiti = createJiti(__filename, {
+  "interopDefault": true,
+  "alias": {
+    "@zxiaosi/cli": "D:/Personal Code/Npm/packages/cli"
+  },
+  "transformOptions": {
+    "babel": {
+      "plugins": []
+    }
   }
-  async run() {
-    console.log("Hello World");
-  }
-}
-new CLI().run();
+})
+
+/** @type {import("D:/Personal Code/Npm/packages/cli/src/index")} */
+module.exports = jiti("D:/Personal Code/Npm/packages/cli/src/index.ts")
