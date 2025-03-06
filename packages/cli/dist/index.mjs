@@ -262,7 +262,7 @@ async function handlePrompts() {
       }
     }
   );
-  const fileName = `${framework}-${monorepo}`;
+  const fileName = framework === "qiankun-vite5" ? `${framework}-lerna6` : `${framework}-${monorepo}`;
   const result = await handleCopyFile(fileName);
   Se(result);
 }
