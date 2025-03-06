@@ -1,7 +1,7 @@
-import pc from 'picocolors';
 import * as p from '@clack/prompts';
-import handleCopyFile from './handleCopyFile';
+import pc from 'picocolors';
 import packageJson from '../package.json';
+import handleCopyFile from './handleCopyFile';
 
 export default async function () {
   p.intro(`${packageJson.name}@${packageJson.version}`);
@@ -40,7 +40,7 @@ export default async function () {
         p.cancel(pc.white('Until next time! 👋'));
         process.exit(0);
       },
-    }
+    },
   );
 
   const fileName =

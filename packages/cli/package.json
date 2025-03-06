@@ -2,42 +2,42 @@
   "name": "@zxiaosi/cli",
   "version": "1.1.0",
   "description": "cli tool for qiankun",
-  "author": "zxiaosi",
-  "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "src",
-    "templates",
-    "build.config.ts"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zxiaosi/npm.git",
-    "directory": "packages/cli"
-  },
-  "bin": {
-    "zxiaosi": "./dist/index.cjs"
-  },
   "keywords": [
     "qiankun",
     "umi",
     "vite",
     "monorepos"
   ],
-  "publishConfig": {
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxiaosi/npm.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT",
+  "author": "zxiaosi",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "zxiaosi": "./dist/index.cjs"
+  },
+  "files": [
+    "dist",
+    "src",
+    "templates",
+    "build.config.ts"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "preview": "node ./dist/index.cjs"
   },
   "devDependencies": {
     "@clack/prompts": "^0.10.0",
     "picocolors": "^1.1.1",
     "unbuild": "^3.5.0"
   },
-  "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
-    "preview": "node ./dist/index.cjs"
+  "publishConfig": {
+    "access": "public"
   }
 }

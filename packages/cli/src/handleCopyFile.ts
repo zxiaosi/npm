@@ -1,5 +1,5 @@
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
 import pc from 'picocolors';
 
 const sourceDir = path.dirname(__dirname);
