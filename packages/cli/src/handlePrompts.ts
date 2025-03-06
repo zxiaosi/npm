@@ -1,8 +1,10 @@
 import pc from 'picocolors';
 import * as p from '@clack/prompts';
+import handleCopyFile from './handleCopyFile';
+import packageJson from '../package.json';
 
 export default async function () {
-  p.intro('@zxiaosi/cli');
+  p.intro(`${packageJson.name}@${packageJson.version}`);
 
   const { monorepo, framework } = await p.group(
     {
@@ -35,43 +37,15 @@ export default async function () {
     },
     {
       onCancel: () => {
-        p.cancel(pc.red('Operation cancelled'));
+        p.cancel(pc.white('Until next time! 👋'));
         process.exit(0);
       },
     }
   );
 
-  // const value = await select({
-  //   message: 'Select a template',
-  //   options: [
-  //     { value: 'umi-lerna-npm-workspace', label: 'umi-lerna-npm-workspace' },
-  //     {
-  //       value: 'umi-lerna-lite-npm-workspace',
-  //       label: 'umi-lerna-lite-npm-workspace',
-  //     },
-  //     { value: 'umi-pnpm-workspace', label: 'umi-pnpm-workspace' },
-  //     {
-  //       value: 'qiankun-vite-lerna-npm-workspace',
-  //       label: 'qiankun-vite-lerna-npm-workspace',
-  //     },
-  //     {
-  //       value: 'qiankun-vite-lerna-lite-npm-workspace',
-  //       label: 'qiankun-vite-lerna-lite-npm-workspace',
-  //     },
-  //     {
-  //       value: 'qiankun-vite-pnpm-workspace',
-  //       label: 'qiankun-vite-pnpm-workspace',
-  //     },
-  //     {
-  //       value: 'qiankun-vite5-lerna6',
-  //       label: 'qiankun-vite5-lerna6',
-  //     },
-  //   ],
-  // });
-
   const fileName = `${framework}-${monorepo}`;
 
-  console.log(`fileName`, fileName);
+  const result = await handleCopyFile(fileName);
 
-  p.outro(pc.green(`Successfully created project !`));
+  p.outro(result);
 }

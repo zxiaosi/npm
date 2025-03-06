@@ -10,6 +10,7 @@
   "files": [
     "dist",
     "src",
+    "templates",
     "build.config.ts"
   ],
   "repository": {
@@ -35,7 +36,8 @@
     "unbuild": "^3.5.0"
   },
   "scripts": {
-    "build": "unbuild --minify",
-    "dev": "unbuild --stub"
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "preview": "node ./dist/index.cjs"
   }
 }

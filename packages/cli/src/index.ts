@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-import { handlePrompts } from './core';
+import handlePrompts from './handlePrompts';
 
 class CLI {
   constructor() {}
