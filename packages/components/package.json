@@ -1,9 +1,27 @@
 {
   "name": "@zxiaosi/components",
   "version": "1.0.1",
+  "description": "components for antd",
+  "keywords": [
+    "antd",
+    "Ant Design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxiaosi/npm.git",
+    "directory": "packages/components"
+  },
+  "license": "MIT",
+  "author": "zxiaosi",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "rollup.config.mjs",
+    "tsconfig.json"
+  ],
   "scripts": {
     "build": "npx rimraf dist && rollup -c"
   },
@@ -21,5 +39,8 @@
     "antd": "^5.24.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
