@@ -205,7 +205,7 @@ ${pc.gray(d)}  ${t}
 `);};`${pc.gray(o)}  `;const Ce=async(t,n)=>{const s={},r=Object.keys(t);for(const i of r){const a=t[i],c=await a({results:s})?.catch(l=>{throw l});if(typeof n?.onCancel=="function"&&BD(c)){s[i]="canceled",n.onCancel({results:s});continue}s[i]=c;}return s};
 
 const name = "@zxiaosi/cli";
-const version = "1.1.0";
+const version = "1.1.2";
 const packageJson = {
 	name: name,
 	version: version};
